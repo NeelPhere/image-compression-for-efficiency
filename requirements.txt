@@ -1,0 +1,13 @@
+# Core Dependencies
+numpy>=1.21.0
+matplotlib>=3.5.0
+Pillow>=9.0.0
+
+# Jupyter Notebook
+jupyter>=1.0.0
+notebook>=6.4.0
+ipykernel>=6.0.0
+
+# Optional (for enhanced functionality)
+scipy>=1.7.0  # Advanced linear algebra operations
+scikit-learn>=1.0.0  # Comparison with sklearn PCA/SVD
