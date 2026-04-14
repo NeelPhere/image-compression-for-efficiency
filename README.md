@@ -8,12 +8,12 @@
 
 ## Overview
 
-This project demonstrates **dimensionality reduction techniques** for image compression using two fundamental linear algebra methods:
+This project demonstrates **dimensionality reduction techniques** for image compression using two of the important linear algebra methods:
 
 1. **Principal Component Analysis (PCA)**
 2. **Singular Value Decomposition (SVD)**
 
-We compare their performance on both **grayscale** and **RGB color images**, analyzing:
+We compare their performance on first **grayscale** (basic) and moev to **RGB color images**, while analyzing:
 - Reconstruction quality (PSNR)
 - Compression efficiency
 - Computational speed
@@ -27,9 +27,9 @@ We compare their performance on both **grayscale** and **RGB color images**, ana
 ### Principal Component Analysis (PCA)
 
 **PCA** is a statistical technique that transforms data into a new coordinate system where:
-- The first axis (principal component) captures the **maximum variance**
+- The first axis (the principal component) captures the **maximum variance**
 - Each successive component captures the **maximum remaining variance**
-- All components are **orthogonal** to each other
+- Note that all these components are **orthogonal** to each other
 
 #### Mathematical Formulation
 
@@ -43,8 +43,8 @@ We compare their performance on both **grayscale** and **RGB color images**, ana
 ```
 
 **Key Properties:**
-- Removes the mean before analysis
-- Focuses on **variance** (deviations from average)
+- Removes the mean before analysis (centering the data)
+- Focuses on **variance** (deviations from our mean)
 - Eigenvectors = principal components
 - Eigenvalues = variance explained by each component
 
@@ -137,37 +137,6 @@ PCA eigenvalues λᵢ = (SVD singular values σᵢ)² / (n-1)
 
 ---
 
-## Installation
-
-### Prerequisites
-
-- Python 3.8 or higher
-- pip package manager
-
-### Setup
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/NeelPhere/image-reconstruction-dimensionality-reduction.git
-cd image-reconstruction-dimensionality-reduction
-```
-
-2. **Install dependencies**
-
-```bash
-pip install -r requirements.txt
-```
-
-3. **Add your images**
-
-Place your images in the project directory:
-- `BW1.jpg` - Grayscale image
-- `RGB1.jpg` - Color image
-- `lightBW1` - small sized grayscale image (for faster runtimes)
-
----
-
 ## Usage
 
 ### Running the Notebook
@@ -178,9 +147,9 @@ Place your images in the project directory:
 jupyter notebook Image_Reconstruction_Dimensionality_Reduction.ipynb
 ```
 
-2. **Run all cells** (Cell → Run All)
+2. **Run everything (all cells)**
 
-3. **Explore the results** in the generated visualizations
+3. **Explore the results** basically play around the values and observe
 
 ### Customizing Analysis
 
@@ -190,7 +159,7 @@ jupyter notebook Image_Reconstruction_Dimensionality_Reduction.ipynb
 k_values = [5, 10, 20, 50, 100, 200]  # Modify this list
 ```
 
-**Use your own images:**
+**Us can your own images:**
 
 ```python
 # For grayscale
@@ -307,24 +276,18 @@ Contributions are welcome! Here's how you can help:
 
 ### Ideas for Contributions
 
-- Add more compression metrics (SSIM, MS-SSIM)
-- Implement other dimensionality reduction techniques (NMF, ICA)
 - Add video compression support
-- Create interactive visualizations
-- Add benchmarks on standard datasets
-- Improve documentation
+- Create better visualizations other than just graphs and tables.
+- Improvement for documentation
 
 ---
 
 ## License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
 ### MIT License Summary
 
  Commercial use  
- Modification  
- Distribution  
+ Modification    
  Private use  
 
 ---
@@ -347,7 +310,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
 
-**If you found this project helpful, please consider giving your remarks!**
+**If you found this project helpful, do consider giving your remarks.**
 
 Made by Neel Patel
 
