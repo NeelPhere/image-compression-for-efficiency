@@ -6,30 +6,7 @@
 
 > **A comprehensive comparison of PCA and SVD for image compression and reconstruction**
 
-![Banner](https://via.placeholder.com/1200x300/4A90E2/FFFFFF?text=Image+Reconstruction+with+PCA+%26+SVD)
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Theory](#theory)
-  - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
-  - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
-  - [PCA vs SVD](#pca-vs-svd)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Results](#results)
-- [Key Findings](#key-findings)
-- [Applications](#applications)
-- [Contributing](#contributing)
-- [License](#license)
-- [Author](#author)
-
----
-
-## 🎯 Overview
+## Overview
 
 This project demonstrates **dimensionality reduction techniques** for image compression using two fundamental linear algebra methods:
 
@@ -45,7 +22,7 @@ We compare their performance on both **grayscale** and **RGB color images**, ana
 
 ---
 
-## 📚 Theory
+## Theory used
 
 ### Principal Component Analysis (PCA)
 
@@ -130,21 +107,21 @@ PCA eigenvalues λᵢ = (SVD singular values σᵢ)² / (n-1)
 
 ---
 
-## ✨ Features
+## Features
 
 ### Analysis Capabilities
 
-- ✅ **Grayscale Image Processing**
+- **Grayscale Image Processing**
   - PCA implementation from scratch
   - SVD implementation
   - Quality comparison at various compression levels
 
-- ✅ **RGB Color Image Processing**
+- **RGB Color Image Processing**
   - Per-channel PCA/SVD analysis
   - Full color reconstruction
   - Channel-wise variance analysis
 
-- ✅ **Comprehensive Metrics**
+- **Comprehensive Metrics**
   - **PSNR** (Peak Signal-to-Noise Ratio)
   - **MSE** (Mean Squared Error)
   - **Compression Ratio**
@@ -152,7 +129,7 @@ PCA eigenvalues λᵢ = (SVD singular values σᵢ)² / (n-1)
   - **Cumulative Energy** (SVD)
   - **Computation Time**
 
-- ✅ **Visualizations**
+- **Visualizations**
   - Side-by-side reconstructions
   - Variance/energy curves
   - Quality vs. compression trade-offs
@@ -160,7 +137,7 @@ PCA eigenvalues λᵢ = (SVD singular values σᵢ)² / (n-1)
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -187,10 +164,11 @@ pip install -r requirements.txt
 Place your images in the project directory:
 - `BW1.jpg` - Grayscale image
 - `RGB1.jpg` - Color image
+- `lightBW1` - small sized grayscale image (for faster runtimes)
 
 ---
 
-## 📖 Usage
+## Usage
 
 ### Running the Notebook
 
@@ -230,7 +208,7 @@ thresholds = [90, 95, 99]  # Variance/energy percentages
 
 ---
 
-## 📊 Results
+## Results
 
 ### Performance Comparison
 
@@ -266,11 +244,11 @@ thresholds = [90, 95, 99]  # Variance/energy percentages
 
 ---
 
-## 🔑 Key Findings
+## Important Findings
 
 ### 1. Compression Efficiency
 
-✅ **SVD requires 10-30% fewer components** for the same reconstruction quality
+ **SVD requires 10-30% fewer components** for the same reconstruction quality
 - At 90% variance/energy: SVD needs k=45, PCA needs k=58 (typical)
 - At 95% variance/energy: SVD needs k=72, PCA needs k=89 (typical)
 
@@ -278,25 +256,25 @@ thresholds = [90, 95, 99]  # Variance/energy percentages
 
 ### 2. Computation Speed
 
-✅ **SVD is ~1.6x faster** than PCA
+ **SVD is ~1.6x faster** than PCA
 - PCA requires covariance matrix computation: O(n²m) + O(n³)
 - SVD is direct decomposition: O(mn²) for m > n
 
 ### 3. Reconstruction Quality
 
-✅ **SVD produces slightly better PSNR** at low k values
+ **SVD produces slightly better PSNR** at low k values
 - At k=5: SVD typically 1-2 dB higher
 - At k=50: Difference becomes negligible (<0.5 dB)
 
 ### 4. Visual Quality
 
-✅ Both methods produce **visually similar results** at k > 20
+ Both methods produce **visually similar results** at k > 20
 - Human eye can't distinguish PCA vs SVD at higher k
 - Main difference is in compression efficiency, not visual quality
 
 ---
 
-## 🌟 Applications
+## Applications in real world
 
 ### Image Compression
 - **JPEG:** Uses DCT (related to SVD) for compression
@@ -323,15 +301,9 @@ thresholds = [90, 95, 99]  # Variance/energy percentages
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
 
 ### Ideas for Contributions
 
@@ -344,61 +316,32 @@ Contributions are welcome! Here's how you can help:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ### MIT License Summary
 
-✅ Commercial use  
-✅ Modification  
-✅ Distribution  
-✅ Private use  
+ Commercial use  
+ Modification  
+ Distribution  
+ Private use  
 
 ---
 
-## 👤 Author
+## Author
 
 **Neel Patel**
 
-- GitHub: [@NeelPhere](https://github.com/NeelPhere)
-- LinkedIn: [linkedin.com/in/neelpatel](https://linkedin.com/in/neelpatel) *(update with your actual LinkedIn)*
-- Email: your.email@example.com *(update with your actual email)*
+- Email: ms24btech11024@iith.ac.in ; neelpatelhere@gmail.com
 
 ---
-
-## 🙏 Acknowledgments
-
-- NumPy development team for excellent linear algebra implementations
-- Jupyter Project for interactive notebook environment
-- PIL/Pillow for image processing capabilities
-- The linear algebra and computer vision research community
-
----
-
-## 📚 References
-
-### Academic Papers
-
-1. **SVD:** Golub, G. H., & Reinsch, C. (1970). *Singular value decomposition and least squares solutions.* Numerische mathematik, 14(5), 403-420.
-
-2. **PCA:** Pearson, K. (1901). *On lines and planes of closest fit to systems of points in space.* The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, 2(11), 559-572.
-
-3. **Image Compression:** Wallace, G. K. (1992). *The JPEG still picture compression standard.* IEEE transactions on consumer electronics, 38(1), xviii-xxxiv.
 
 ### Resources
 
 - [NumPy Linear Algebra Documentation](https://numpy.org/doc/stable/reference/routines.linalg.html)
 - [Understanding PCA and SVD](https://stats.stackexchange.com/questions/134282/relationship-between-svd-and-pca-how-to-use-svd-to-perform-pca)
 - [Image Compression Techniques](https://en.wikipedia.org/wiki/Image_compression)
-
----
-
-## 📈 Project Stats
-
-![GitHub stars](https://img.shields.io/github/stars/NeelPhere/image-reconstruction-dimensionality-reduction?style=social)
-![GitHub forks](https://img.shields.io/github/forks/NeelPhere/image-reconstruction-dimensionality-reduction?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/NeelPhere/image-reconstruction-dimensionality-reduction?style=social)
 
 ---
 
