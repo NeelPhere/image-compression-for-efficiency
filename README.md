@@ -13,7 +13,7 @@ This project demonstrates **dimensionality reduction techniques** for image comp
 1. **Principal Component Analysis (PCA)**
 2. **Singular Value Decomposition (SVD)**
 
-We compare their performance on first **grayscale** (basic) and moev to **RGB color images**, while analyzing:
+We compare their performance on first **grayscale** (basic) and then move to **RGB color images**, while analyzing:
 - Reconstruction quality (PSNR)
 - Compression efficiency
 - Computational speed
